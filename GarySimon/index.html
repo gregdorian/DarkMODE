@@ -104,8 +104,8 @@
                 </nav>
                 <section class="hero is-info welcome is-small">
                     <div class="hero-body">
-                        <div class="container">
-                            <h1 class="title">
+                        <div class="container inverted">
+                            <h1 class="title ">
                                 Hello, Admin.
                             </h1>
                             <h2 class="subtitle">
@@ -274,7 +274,9 @@
                 event = (event || window.event);
                 if (event.keyCode === 13) {
                     document.documentElement.classList.toggle('dark-mode');
-                    return false;
+                    document.querySelectorAll('.inverted').forEach((result) => {
+                        result.classList.toggle('invert');
+                    });
                 }
             }
         </script>
